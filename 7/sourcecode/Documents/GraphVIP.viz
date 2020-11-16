@@ -1,0 +1,46 @@
+// https://dreampuf.github.io/GraphvizOnline
+
+digraph {
+    
+     subgraph cluster_VIP_AAA {
+        label = "VIP - Scheme A";
+        style=filled;
+        color=lightgrey;
+        ViewAAA-> ViewControllerAAA [label="1:1"] 
+        ViewControllerAAA -> InteractorAAA [label="1:1"] 
+        InteractorAAA -> PresenterAAA [label="1:1"] 
+        PresenterAAA -> ViewControllerAAA [label="1:1"] 
+        ViewControllerAAA -> ViewAAA [label="1:1"] 
+        ViewControllerAAA -> RouterAAA [label="1:1"] 
+    }
+    
+     subgraph cluster_VIP_BBB {
+        label = "VIP - Scheme B";
+        style=filled;
+        color=lightgrey;
+        ViewBBB-> ViewControllerBBB [label="1:1"] 
+        ViewControllerBBB -> InteractorBBB [label="1:1"] 
+        InteractorBBB -> PresenterBBB [label="1:1"] 
+        PresenterBBB -> ViewControllerBBB [label="1:1"] 
+        ViewControllerBBB -> ViewBBB [label="1:1"] 
+        ViewControllerBBB -> RouterBBB [label="1:1"] 
+    }
+    
+    subgraph cluster_Worker {
+        label = "WORKERS";
+        style=filled;
+        color=lightgrey;
+        WorkerXXX
+        WorkerYYY 
+        WorkerZZZ 
+    }
+    
+    RouterBBB -> ViewControllerAAA [style=dashed] [label="1:N"]
+    RouterAAA -> ViewControllerBBB [style=dashed] [label="1:N"]
+    
+    InteractorAAA -> WorkerXXX [style=dashed] [label="1:N"]
+    InteractorAAA -> WorkerYYY [style=dashed] [label="1:N"]
+    InteractorAAA -> WorkerZZZ [style=dashed] [label="1:N"]
+
+    InteractorBBB -> WorkerYYY [style=dashed] [label="1:N"]
+}

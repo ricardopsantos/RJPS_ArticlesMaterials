@@ -1,0 +1,375 @@
+
+
+#
+# DOCS
+#
+# https://github.com/yonaskolb/XcodeGen/blob/master/Docs/ProjectSpec.md
+
+#
+# SAMPLES
+#
+# https://gist.github.com/d-date/44510c5b4b3baf820033453bfeb235c3
+# https://github.com/yonaskolb/XcodeGen/blob/master/Docs/Examples.md
+#
+
+####################### PROJECT #######################
+####################### PROJECT #######################  
+####################### PROJECT #######################
+
+name: GoodToGo
+
+options:
+  bundleIdPrefix: com.GoodToGo
+  xcodeVersion: '12.0.1'
+  deploymentTarget: '12.0'
+  groupSortPosition: top
+  generateEmptyDirectories: true
+  findCarthageFrameworks: false
+  minimumXcodeGenVersion: '2.18.0'
+
+####################### AUXILIAR FOLDERS #######################
+####################### AUXILIAR FOLDERS #######################  
+####################### AUXILIAR FOLDERS #######################
+
+fileGroups:
+  - ../Documents
+
+####################### CONFIGS #######################
+####################### CONFIGS #######################  
+####################### CONFIGS #######################
+
+configs:
+  Debug.Mock: debug
+  Debug.Dev: debug
+  Debug.QA: debug
+  Debug.Prod: debug
+  Release: release
+  
+####################### SETTINGS #######################
+####################### SETTINGS #######################  
+####################### SETTINGS #######################
+
+settings:
+  base:
+    IPHONEOS_DEPLOYMENT_TARGET: 12.0
+    ENABLE_BITCODE: NO
+    SWIFT_VERSION: 5.2
+  configs:
+    Release: 
+      ENABLE_BITCODE: YES
+     
+targetTemplates:
+
+  Framework:
+    type: framework
+    platform: iOS
+    deploymentTarget: 11.0
+    settings:
+      base:
+        MARKETING_VERSION: 1.0
+  
+  UIFramework:
+    type: framework
+    platform: iOS
+    deploymentTarget: 11.0
+    settings:
+      base:
+        MARKETING_VERSION: 1.0
+    dependencies:
+      - carthage: RxRelay
+      - carthage: RxSwift
+      - carthage: RxCocoa
+      - carthage: Differentiator
+      - carthage: RxDataSources
+      - target: BaseDomain
+        link: false
+      - target: Designables
+        link: false
+      - target: BaseUI
+        link: false
+      - target: BaseConstants
+        link: false
+      - target: AppTheme
+        link: false
+      - target: Extensions
+        link: false
+      - target: DevTools
+        link: false
+            
+####################### TARGETS #######################
+####################### TARGETS #######################  
+####################### TARGETS #######################
+       
+targets:
+  
+## Base App ## Base App ## Base App ## Base App ## Base App 
+
+  GoodToGo:
+    type: application
+    platform: iOS
+    deploymentTarget: 12.0
+    settings:
+      base:
+        MARKETING_VERSION: 1.0
+    sources:
+       - path: ../GoodToGo
+    dependencies:
+      - carthage: RxRelay
+      - carthage: RxSwift
+      - carthage: RxCocoa
+      - carthage: Differentiator
+      - carthage: RxDataSources
+      - carthage: Swinject
+      - carthage: SwinjectAutoregistration
+      - carthage: RJSLibUFBase
+      - carthage: RJSLibUFStorage
+      - carthage: RJSLibUFNetworking
+      - carthage: Lottie
+      - carthage: SkyFloatingLabelTextField
+      - carthage: TinyConstraints
+      - carthage: Material
+      - carthage: Motion
+      - target: BaseUI
+        link: false
+      - target: DevTools
+        link: false
+      - target: UIGalleryApp
+        link: false
+        
+    postCompileScripts:
+      - script: |
+                if which swiftlint >/dev/null; then
+                   swiftlint
+                else
+                   echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
+                fi
+        name: Run SwiftLint
+
+## Specific App Related ## Specific App Related ## Specific App Related ## Specific App Related
+
+  UIGalleryApp:
+    templates:
+      - UIFramework
+    sources:
+      - path: ../UIGalleryApp
+    dependencies:
+      - carthage: Swinject
+      - carthage: RJSLibUFNetworking
+      - target: DomainGalleryApp
+        link: false
+      - target: CoreGalleryApp
+        link: false
+      - target: RepositoryWebAPIGalleryApp
+        link: false
+      - target: DevTools
+        link: false
+      - target: BaseCore
+        link: false  
+        
+  RepositoryWebAPIGalleryApp:
+    templates: 
+      - Framework
+    sources: 
+      - path: ../RepositoryWebAPIGalleryApp  
+    dependencies:
+      - carthage: RJSLibUFNetworking
+      - target: BaseRepositoryWebAPI
+        link: false  
+      - target: BaseConstants
+        link: false  
+      - target: DevTools
+        link: false   
+      - target: DomainGalleryApp
+        link: false   
+               
+  DomainGalleryApp:
+    templates: 
+      - Framework
+    sources: 
+      - path: ../DomainGalleryApp   
+    dependencies:
+      - carthage: RJSLibUFNetworking
+      - target: BaseDomain
+        link: false
+       
+  CoreGalleryApp:
+    templates: 
+      - Framework
+    sources: 
+      - path: ../CoreGalleryApp  
+    dependencies:
+      - target: BaseCore
+        link: false    
+      
+## Generic App Related ## Generic App Related ## Generic App Related ## Generic App Related
+  
+  Factory:
+    templates: 
+      - Framework
+    sources: 
+      - path: ../Factory
+    dependencies:
+      - carthage: RxSwift
+      - carthage: RxCocoa
+      - carthage: RJSLibUFStorage
+      - target: BaseDomain
+        link: false
+      - target: AppResources
+        link: false
+      
+  BaseRepositories:
+    templates: 
+      - Framework
+    sources: 
+      - path: ../BaseRepositories
+    dependencies:
+      - carthage: RxSwift
+      - carthage: RxCocoa
+      - carthage: RJSLibUFStorage
+      - target: BaseDomain
+        link: false
+      - target: Factory
+        link: false
+      
+  BaseRepositoryWebAPI:
+    templates: 
+      - Framework
+    sources: 
+      - path: ../BaseRepositoryWebAPI
+    dependencies:
+      - carthage: RxSwift
+      - carthage: RxCocoa    
+      - target: DevTools
+        link: false  
+       
+  BaseCore:
+    templates: 
+      - Framework
+    sources: 
+      - path: ../BaseCore
+    dependencies:
+      - carthage: Swinject
+      - carthage: SwinjectAutoregistration
+      - carthage: RJSLibUFNetworking
+      - target: BaseDomain
+        link: false
+      - target: AppTheme
+        link: false
+      - target: BaseRepositories
+        link: false
+       
+  BaseDomain:
+    templates: 
+      - Framework
+    sources: 
+      - path: ../BaseDomain
+    dependencies:
+      - carthage: RxSwift
+      - carthage: RxCocoa
+      - target: BaseConstants
+        link: false
+         
+  Designables:
+    templates: 
+      - Framework
+    sources: 
+      - path: ../Designables
+    dependencies:
+      - carthage: RxSwift
+      - carthage: RxCocoa
+      - carthage: RxGesture
+      - carthage: RJSLibUFBase
+      - carthage: RJSLibUFALayouts
+      - carthage: SkyFloatingLabelTextField
+      - carthage: TinyConstraints
+      - carthage: Material
+      - carthage: Motion
+      - target: BaseUI
+        link: false
+      
+  Extensions:
+    templates: 
+      - Framework
+    sources: 
+      - path: ../Extensions
+    dependencies:
+      - carthage: RxSwift
+      - carthage: RxCocoa
+      - carthage: TinyConstraints
+      - carthage: Pulsator
+      - target: DevTools
+        link: false
+      
+  AppResources:
+    templates: 
+      - Framework
+    sources: 
+      - path: ../AppResources
+    dependencies:
+      - target: DevTools
+        link: false
+      - carthage: RJSLibUFBase
+      
+  BaseUI:
+    templates: 
+      - Framework
+    sources: 
+      - path: ../BaseUI
+    dependencies:
+      - carthage: RxSwift
+      - carthage: RxCocoa
+      - target: AppResources
+        link: false
+      - target: AppTheme
+        link: false
+      - target: BaseCore
+        link: false
+        
+  PointFreeFunctions:
+    templates: 
+      - Framework
+    sources: 
+      - path: ../PointFreeFunctions
+    dependencies:
+      - carthage: RJSLibUFStorage
+   
+  AppTheme:
+    templates: 
+      - Framework
+    sources: 
+      - path: ../AppTheme 
+    dependencies:
+      - carthage: RJSLibUFAppThemes
+      - target: BaseConstants
+        link: false
+      - target: Extensions
+        link: false
+      - target: AppResources
+        link: false
+      - target: DevTools
+        link: false          
+       
+  BaseConstants:
+    templates: 
+      - Framework
+    sources: 
+      - path: ../BaseConstants
+    dependencies:
+      - carthage: RJSLibUFBase
+         
+  DevTools:
+    templates: 
+      - Framework
+    sources: 
+      - path: ../DevTools
+    dependencies:
+      - carthage: RxCocoa
+      - carthage: RxSwift
+      - carthage: RJSLibUFStorage
+      - carthage: ToastSwiftFramework
+      - carthage: NSLoggerSwift
+      - target: PointFreeFunctions
+        link: false
+      - target: BaseConstants
+        link: false
+

@@ -1,0 +1,250 @@
+#
+# https://medium.com/flawless-app-stories/swiftlint-in-use-279f44b3182e
+# https://regex101.com/
+#
+
+excluded:
+    - Carthage
+
+custom_rules:
+
+    rule_UIColor_1:
+        included: ".*\\.swift"
+        name: "Avoid UIColor.App"
+        regex: 'UIColor.App.'
+        message: "Don't use [UIColor.App]. Use [typealias AppColors = UIColor.App]"
+        severity: error
+
+    rule_UIColor_2:
+        included: ".*\\.swift"
+        name: "Avoid UIColor.Pack1"
+        regex: 'UIColor.Pack1'
+        message: "Avoid [UIColor.Pack1]. Use [ColorName]"
+        severity: warning
+
+    rule_UIColor_3:
+        included: ".*\\.swift"
+        name: "Avoid ComponentColor.Pack1"
+        regex: 'ComponentColor.Pack1'
+        message: "Avoid [ComponentColor.Pack1]. Use [ColorName]"
+        severity: warning
+
+    rule_UIColor_3:
+        included: ".*\\.swift"
+        name: "Avoid UIColor.Pack2"
+        regex: 'UIColor.Pack2'
+        message: "Avoid [UIColor.Pack2]. Use [ColorName]"
+        severity: error
+
+    rule_UIColor_4:
+        included: ".*\\.swift"
+        name: "Avoid ComponentColor.Pack2"
+        regex: 'ComponentColor.Pack2'
+        message: "Avoid [ComponentColor.Pack2]. Use [ColorName]"
+        severity: warning
+
+    rule_UIFont_1:
+        included: ".*\\.swift"
+        name: "Forbiden UIFont.App"
+        regex: 'UIFont.App.'
+        message: "Don't use [UIFont.App]. Use [typealias AppColors = AppFonts.App]"
+        severity: error
+
+    rule_Coding:
+        included: ".*\\.swift"
+        name: "Forbiden Codable= ..."
+        regex: 'Codable'
+        message: "Don't use Codable alone. Use [ModelEntityProtocol] or [ResponseDtoProtocol]"
+        severity: error
+
+    no_letUnderscore:
+        included: ".*\\.swift"
+        name: "No let _ = ..."
+        regex: 'let[ ][_][ ][=]'
+        message: "Don't use let _ = xxx , use xxx != nil"
+        severity: error
+
+    naming_Singletons:
+        included: ".*\\.swift"
+        name: "Singleton naming"
+        regex: "static (var|let)[ ](instance|sharedInstance)[ ]*[:]"
+        message: "Use shared"
+        severity: error
+
+    no_hardCodedTimeZones:
+        included: ".*\\.swift"
+        name: "Fordiden hardcoded TimeZones"
+        regex: "\"UTC\"|\"GMT\""
+        message: "Use AppConstants.TimeZones..."
+        severity: error
+
+    no_TODO:
+        included: ".*\\.swift"
+        name: "Fordiden TODO/FIX"
+        regex: "TODO|TO DO|FIX"
+        message: "Use #warning"
+        severity: error
+
+    no_BindNext:
+        included: ".*\\.swift"
+        name: "Fordiden bind"
+        regex: "bind(onNext"
+        message: "Use asObservable()."
+        severity: error
+
+    no_hardCodedDateFormats:
+        included: ".*\\.swift"
+        name: "Hardcoded DateFormats"
+        regex: '= "yyyy|DateFormatter(withFormat'
+        message: "Use a DateFormats on AppContants.Date or DateFormatterTypes"
+        severity: error
+
+    no_print:
+        included: ".*\\.swift"
+        name: "Fordiden print"
+        regex: "print[(]"
+        message: "Use DevTools.Log..."
+        severity: warning
+
+    no_hardCodedImages:
+        included: ".*\\.swift"
+        name: "Fordiden hardCoded images"
+        regex: "(image|[(]named]|imageLiteralResourceName|highlightedResource|resourceName){1}[ ]*[:][ ]*[\"]"
+        message: "Don't use hardCoded images"
+        severity: error
+
+#numbers_smell:
+#    regex: '(return |case |\w\(|: |\?\? |\, |== |<=? |>=? |\+= |\-= |\/= |\*= |%= |\w\.\w+ = )\(*-?\d{2,}'
+#    message: "Numbers smell; define a constant instead."
+#    severity: warning
+
+#    multiline_commented_code:
+#        regex: '^\s*[a-z]'
+#        match_kinds: comment
+#        message: "Comment starting with lowercase letter - did you forget to delete old code?"
+#        severity: warning
+
+#    commented_code:
+#        regex: '(?<!:|\/)\/\/\h*[a-z.](?!wiftlint)'
+#        message: "Comment starting with lowercase letter - did you forget to delete old code?"
+#        severity: warning
+
+file_length:
+    - 750  # warning
+    - 1000 # error
+
+type_body_length:
+    - 500  # warning
+    - 1000 # error
+
+large_tuple:
+    - 4  # warning
+    - 5  # error
+
+empty_enum_arguments:
+    warning
+
+force_try:
+    warning
+
+force_cast:
+    warning
+
+line_length:
+    warning: 200
+    error: 300
+
+nesting:
+    type_level:
+        warning: 3
+
+type_name:
+    max_length: 60
+    allowed_symbols: "_"
+    excluded:
+        - iPhone
+        - RP
+        - AC
+        - UC
+        - MP
+        - VM
+        - VC
+        - AS
+        - Rx
+        - MD
+        - Id
+        - R
+        - V
+        - T
+        - W
+        - P
+        - I
+        - E
+        - M
+
+identifier_name:
+    max_length: 60
+    excluded:
+        - iPhone
+        - id
+
+function_parameter_count: 10
+
+disabled_rules:
+    - todo
+    - valid_ibinspectable
+    - identifier_name
+    - trailing_whitespace
+
+#
+# THE RULES BELOW ARE NOT TO BE DELETED
+#  All warnings of this type were fixed @ 31-03-2020, please don't do more...
+#
+
+duplicate_imports:
+    severity: error
+
+operator_whitespace:
+    severity: error
+
+redundant_string_enum_value:
+    severity: error
+
+trailing_newline:
+    severity: error
+
+statement_position:
+    severity: error
+
+unused_closure_parameter:
+    severity: error
+
+vertical_whitespace:
+    severity: error
+
+implicit_getter:
+    severity: warning
+
+colon:
+    severity: error
+
+shorthand_operator:
+    severity: error
+
+trailing_comma:
+    severity: error
+
+comma:
+    severity: error
+
+redundant_void_return:
+    severity: error
+
+return_arrow_whitespace:
+    severity: error
+
+opening_brace:
+    severity: error
+
+no_space_in_method_call:
+    severity: error

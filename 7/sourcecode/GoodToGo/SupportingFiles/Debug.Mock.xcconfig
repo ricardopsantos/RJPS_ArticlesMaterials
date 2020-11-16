@@ -1,0 +1,16 @@
+//
+//  GoodToGo
+//
+//  Created by Ricardo Santos
+//  Copyright © 2020 Ricardo P Santos. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+// https://nshipster.com/xcconfig/
+
+APP_MODE = Debug.Mock
+
+IS_APP_NAME      = AppName_Mock
+IS_APP_VERSION   = 1
+IS_APP_BUNDLE_ID = com.app.bundle.id.mock

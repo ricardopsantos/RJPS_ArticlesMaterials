@@ -1,0 +1,45 @@
+/* Localized versions of Info.plist keys */
+
+/* ENGLISH - ALPHABHETIC ORDER START */
+/* ENGLISH - ALPHABHETIC ORDER START */
+/* ENGLISH - ALPHABHETIC ORDER START */
+
+"Back"                                     = "Back";
+
+"Close"                                    = "Close";
+"Closed"                                   = "Closed";
+"Cancel"                                   = "Cancel";
+"Confirm"                                  = "Confirm";
+"Completed"                                = "completed";
+
+"Dismiss"                                  = "Dismiss";
+
+"Loading"                                  = "Loading";
+"Language"                                 = "Language";
+"Logout"                                   = "Logout";
+"Login"                                    = "Log in";
+
+"No"                                       = "No";
+"NoInternetConnection"                     = "No internet connection.";
+"NoResults"                                = "No results available";
+
+"More"                                     = "More";
+
+"OK"                                       = "OK";
+"OpenSettings"                             = "Open settings";
+
+"PleaseWait"                               = "Please wait";
+"PleaseTryAgainLater"                      = "An error occurred. Please try again later.";
+
+"Search"                                   = "Search";
+"Settings"                                 = "Settings";
+"Success"                                  = "Success";
+"Save"                                     = "Save";
+"Skip"                                     = "Skip";
+
+"Terms&Conditions"                         = "Terms & Conditions";
+
+"Undo"                                     = "Undo";
+
+"Yes"                                      = "Yes";
+

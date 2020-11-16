@@ -1,0 +1,54 @@
+####################################################################
+# Reactive Programming in Swift
+# https://github.com/ReactiveX/RxSwift
+github "ReactiveX/RxSwift"
+github "RxSwiftCommunity/RxGesture"
+github "RxSwiftCommunity/RxDataSources"
+
+####################################################################
+# https://github.com/shu223/Pulsator/
+# Pulse animation for iOS
+github "shu223/Pulsator"
+
+####################################################################
+# An iOS library to natively render After Effects vector animations http://airbnb.io/lottie/
+# https://github.com/airbnb/lottie-ios
+github "airbnb/lottie-ios" "master"
+
+####################################################################
+# A beautiful and flexible text field control implementation of "Float Label Pattern". Written in Swift.
+# https://github.com/Skyscanner/SkyFloatingLabelTextField
+github "Skyscanner/SkyFloatingLabelTextField"
+
+####################################################################
+# https://github.com/fpillet/NSLogger
+# A modern, flexible logging tool
+github "fpillet/NSLogger"
+
+####################################################################
+# Nothing but sugar.
+# https://github.com/roberthein/TinyConstraints
+github "roberthein/TinyConstraints"
+
+####################################################################
+# A Swift extension that adds toast notifications to the UIView object class.
+# https://github.com/scalessec/Toast-Swift
+github "scalessec/Toast-Swift" ~> 5.0.1
+
+####################################################################
+
+# Dependency injection framework for Swift with iOS/macOS/Linux
+# https://github.com/Swinject/Swinject
+github "Swinject/Swinject"
+github "Swinject/SwinjectAutoregistration"
+
+####################################################################
+# A UI/UX framework for creating beautiful applications. http://cosmicmind.com
+# https://github.com/CosmicMind/Material
+github "CosmicMind/Material"
+
+####################################################################
+# https://github.com/ricardopsantos/RJPSLibSF
+# Guys love tools, this is my Swift toolbox
+github "ricardopsantos/RJSLibUF" "1.0.1"
+
