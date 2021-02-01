@@ -3,5 +3,7 @@
     <pages>
         <page name='Step1'/>
         <page name='Step2'/>
+        <page name='Step4'/>
+        <page name='Step3'/>
     </pages>
 </playground>

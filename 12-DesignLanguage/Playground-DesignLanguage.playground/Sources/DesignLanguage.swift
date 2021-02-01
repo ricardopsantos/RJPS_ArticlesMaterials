@@ -140,3 +140,18 @@ public extension UILabel {
         }
     }
 }
+
+
+public struct UIKitFactory {
+    private init() { }
+    
+    public static func labelWith(text: String,
+                      style: LabelStyle,
+                      textAlignment: NSTextAlignment = .justified) -> UILabel {
+        let some = UILabel()
+        some.layoutStyle = style
+        some.text = text
+        some.textAlignment = textAlignment
+        return some
+    }
+}
