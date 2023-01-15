@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AE4B78DD29746109000CBACA /* CachePolicyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B78DC29746109000CBACA /* CachePolicyApp.swift */; };
+		AE4B78E52974610A000CBACA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE4B78E42974610A000CBACA /* Preview Assets.xcassets */; };
+		AE4B78EC29746164000CBACA /* CachePolicyTestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B78EB29746164000CBACA /* CachePolicyTestingView.swift */; };
+		AE4B79CC2974626B000CBACA /* Combine+CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B79112974626A000CBACA /* Combine+CancelBag.swift */; };
+		AE4B79D02974626B000CBACA /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B79162974626A000CBACA /* Publisher+Extensions.swift */; };
+		AE4B79DD2974626B000CBACA /* SimpleCacheManagerForCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B79272974626A000CBACA /* SimpleCacheManagerForCodable.swift */; };
+		AE4B7A1A2974626B000CBACA /* CachePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B79702974626A000CBACA /* CachePolicy.swift */; };
+		AE4B7A3C2974626B000CBACA /* FRPSimpleNetworkAgentRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B79A42974626A000CBACA /* FRPSimpleNetworkAgentRequestModel.swift */; };
+		AE4B7A3D2974626B000CBACA /* FRPSimpleNetworkAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B79A52974626A000CBACA /* FRPSimpleNetworkAgent.swift */; };
+		AE4B7A3E2974626B000CBACA /* FRPSimpleNetworkAgentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B79A62974626A000CBACA /* FRPSimpleNetworkAgentProtocol.swift */; };
+		AE4B7A3F2974626B000CBACA /* NetworkAgentUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B79A82974626A000CBACA /* NetworkAgentUtils.swift */; };
+		AE4B7A402974626B000CBACA /* E.HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B79AA2974626A000CBACA /* E.HttpMethod.swift */; };
+		AE4B7A412974626B000CBACA /* E.FRPSimpleNetworkClientAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B79AB2974626A000CBACA /* E.FRPSimpleNetworkClientAPIError.swift */; };
+		AE4B7A422974626B000CBACA /* E.ResponseFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B79AC2974626A000CBACA /* E.ResponseFormat.swift */; };
+		AE4B7A432974626B000CBACA /* NetworkingUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B79AD2974626A000CBACA /* NetworkingUtils.swift */; };
+		AE4B7A452974626B000CBACA /* typealias.Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B79AF2974626A000CBACA /* typealias.Networking.swift */; };
+		AE4B7A4B297463E2000CBACA /* SampleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B7A4A297463E2000CBACA /* SampleUseCase.swift */; };
+		AE4B7A4D2974641E000CBACA /* WebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B7A4C2974641E000CBACA /* WebAPI.swift */; };
+		AE4B7A4F297467C2000CBACA /* AppErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B7A4E297467C2000CBACA /* AppErrors.swift */; };
+		AE4B7A5129746C63000CBACA /* PointFree.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B7A5029746C63000CBACA /* PointFree.swift */; };
+		AE4B7A5329746EFF000CBACA /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B7A5229746EFF000CBACA /* String+Extensions.swift */; };
+		AE4B7A5529746F2C000CBACA /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B7A5429746F2C000CBACA /* URLRequest+Extensions.swift */; };
+		AE4B7A5729747101000CBACA /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B7A5629747101000CBACA /* Date+Extensions.swift */; };
+		AE4B7A5D297478AF000CBACA /* RequestDto+Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B7A5C297478AF000CBACA /* RequestDto+Employee.swift */; };
+		AE4B7A5F297479D5000CBACA /* RepositoriesErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B7A5E297479D5000CBACA /* RepositoriesErrorHandler.swift */; };
+		AE4B7A6329747ACD000CBACA /* ResponseDto+EmployeeServiceAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B7A6229747ACD000CBACA /* ResponseDto+EmployeeServiceAvailability.swift */; };
+		AE4B7A6729747D18000CBACA /* ExpiringCodableObjectWithKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B7A6629747D18000CBACA /* ExpiringCodableObjectWithKey.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AE4B78D929746109000CBACA /* CachePolicy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CachePolicy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE4B78DC29746109000CBACA /* CachePolicyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachePolicyApp.swift; sourceTree = "<group>"; };
+		AE4B78E22974610A000CBACA /* CachePolicy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CachePolicy.entitlements; sourceTree = "<group>"; };
+		AE4B78E42974610A000CBACA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AE4B78EB29746164000CBACA /* CachePolicyTestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachePolicyTestingView.swift; sourceTree = "<group>"; };
+		AE4B79112974626A000CBACA /* Combine+CancelBag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Combine+CancelBag.swift"; sourceTree = "<group>"; };
+		AE4B79162974626A000CBACA /* Publisher+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Publisher+Extensions.swift"; sourceTree = "<group>"; };
+		AE4B79272974626A000CBACA /* SimpleCacheManagerForCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCacheManagerForCodable.swift; sourceTree = "<group>"; };
+		AE4B79702974626A000CBACA /* CachePolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CachePolicy.swift; sourceTree = "<group>"; };
+		AE4B79A42974626A000CBACA /* FRPSimpleNetworkAgentRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRPSimpleNetworkAgentRequestModel.swift; sourceTree = "<group>"; };
+		AE4B79A52974626A000CBACA /* FRPSimpleNetworkAgent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRPSimpleNetworkAgent.swift; sourceTree = "<group>"; };
+		AE4B79A62974626A000CBACA /* FRPSimpleNetworkAgentProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRPSimpleNetworkAgentProtocol.swift; sourceTree = "<group>"; };
+		AE4B79A82974626A000CBACA /* NetworkAgentUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAgentUtils.swift; sourceTree = "<group>"; };
+		AE4B79AA2974626A000CBACA /* E.HttpMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = E.HttpMethod.swift; sourceTree = "<group>"; };
+		AE4B79AB2974626A000CBACA /* E.FRPSimpleNetworkClientAPIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = E.FRPSimpleNetworkClientAPIError.swift; sourceTree = "<group>"; };
+		AE4B79AC2974626A000CBACA /* E.ResponseFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = E.ResponseFormat.swift; sourceTree = "<group>"; };
+		AE4B79AD2974626A000CBACA /* NetworkingUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingUtils.swift; sourceTree = "<group>"; };
+		AE4B79AF2974626A000CBACA /* typealias.Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = typealias.Networking.swift; sourceTree = "<group>"; };
+		AE4B7A4A297463E2000CBACA /* SampleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleUseCase.swift; sourceTree = "<group>"; };
+		AE4B7A4C2974641E000CBACA /* WebAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAPI.swift; sourceTree = "<group>"; };
+		AE4B7A4E297467C2000CBACA /* AppErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppErrors.swift; sourceTree = "<group>"; };
+		AE4B7A5029746C63000CBACA /* PointFree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointFree.swift; sourceTree = "<group>"; };
+		AE4B7A5229746EFF000CBACA /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "CachePolicy/Common/Source/String+Extensions.swift"; sourceTree = SOURCE_ROOT; };
+		AE4B7A5429746F2C000CBACA /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
+		AE4B7A5629747101000CBACA /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date+Extensions.swift"; path = "CachePolicy/Common/Source/Extensions/Date+Extensions.swift"; sourceTree = SOURCE_ROOT; };
+		AE4B7A5C297478AF000CBACA /* RequestDto+Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestDto+Employee.swift"; sourceTree = "<group>"; };
+		AE4B7A5E297479D5000CBACA /* RepositoriesErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesErrorHandler.swift; sourceTree = "<group>"; };
+		AE4B7A6229747ACD000CBACA /* ResponseDto+EmployeeServiceAvailability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponseDto+EmployeeServiceAvailability.swift"; sourceTree = "<group>"; };
+		AE4B7A6629747D18000CBACA /* ExpiringCodableObjectWithKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpiringCodableObjectWithKey.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE4B78D629746109000CBACA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AE4B78D029746109000CBACA = {
+			isa = PBXGroup;
+			children = (
+				AE4B78DB29746109000CBACA /* CachePolicy */,
+				AE4B78DA29746109000CBACA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AE4B78DA29746109000CBACA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE4B78D929746109000CBACA /* CachePolicy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE4B78DB29746109000CBACA /* CachePolicy */ = {
+			isa = PBXGroup;
+			children = (
+				AE4B7A5929747815000CBACA /* CacheManager */,
+				AE4B78EF2974626A000CBACA /* Common */,
+				AE4B7A49297463D4000CBACA /* UseCase */,
+				AE4B7A482974636F000CBACA /* Views */,
+				AE4B78E22974610A000CBACA /* CachePolicy.entitlements */,
+				AE4B78E32974610A000CBACA /* Preview Content */,
+			);
+			path = CachePolicy;
+			sourceTree = "<group>";
+		};
+		AE4B78E32974610A000CBACA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AE4B78E42974610A000CBACA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AE4B78EF2974626A000CBACA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				AE4B7A5029746C63000CBACA /* PointFree.swift */,
+				AE4B78F12974626A000CBACA /* Source */,
+				AE4B79AF2974626A000CBACA /* typealias.Networking.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		AE4B78F12974626A000CBACA /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				AE4B78F22974626A000CBACA /* Extensions */,
+				AE4B79902974626A000CBACA /* Networking */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		AE4B78F22974626A000CBACA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AE4B7A5629747101000CBACA /* Date+Extensions.swift */,
+				AE4B7A5229746EFF000CBACA /* String+Extensions.swift */,
+				AE4B79112974626A000CBACA /* Combine+CancelBag.swift */,
+				AE4B79162974626A000CBACA /* Publisher+Extensions.swift */,
+				AE4B7A5429746F2C000CBACA /* URLRequest+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AE4B79902974626A000CBACA /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				AE4B79932974626A000CBACA /* FRPSimpleNetworkAgent */,
+				AE4B79A72974626A000CBACA /* NetworkAgentsSharedLogic */,
+				AE4B79AD2974626A000CBACA /* NetworkingUtils.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		AE4B79932974626A000CBACA /* FRPSimpleNetworkAgent */ = {
+			isa = PBXGroup;
+			children = (
+				AE4B79A42974626A000CBACA /* FRPSimpleNetworkAgentRequestModel.swift */,
+				AE4B79A52974626A000CBACA /* FRPSimpleNetworkAgent.swift */,
+				AE4B79A62974626A000CBACA /* FRPSimpleNetworkAgentProtocol.swift */,
+			);
+			path = FRPSimpleNetworkAgent;
+			sourceTree = "<group>";
+		};
+		AE4B79A72974626A000CBACA /* NetworkAgentsSharedLogic */ = {
+			isa = PBXGroup;
+			children = (
+				AE4B79A82974626A000CBACA /* NetworkAgentUtils.swift */,
+				AE4B79A92974626A000CBACA /* ValueTypes */,
+			);
+			path = NetworkAgentsSharedLogic;
+			sourceTree = "<group>";
+		};
+		AE4B79A92974626A000CBACA /* ValueTypes */ = {
+			isa = PBXGroup;
+			children = (
+				AE4B79AA2974626A000CBACA /* E.HttpMethod.swift */,
+				AE4B79AB2974626A000CBACA /* E.FRPSimpleNetworkClientAPIError.swift */,
+				AE4B79AC2974626A000CBACA /* E.ResponseFormat.swift */,
+			);
+			path = ValueTypes;
+			sourceTree = "<group>";
+		};
+		AE4B7A482974636F000CBACA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AE4B78DC29746109000CBACA /* CachePolicyApp.swift */,
+				AE4B78EB29746164000CBACA /* CachePolicyTestingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AE4B7A49297463D4000CBACA /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				AE4B7A4E297467C2000CBACA /* AppErrors.swift */,
+				AE4B7A5B2974789F000CBACA /* WebAPI+Models */,
+				AE4B7A5A2974784F000CBACA /* WebAPI */,
+				AE4B7A4A297463E2000CBACA /* SampleUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		AE4B7A5929747815000CBACA /* CacheManager */ = {
+			isa = PBXGroup;
+			children = (
+				AE4B79702974626A000CBACA /* CachePolicy.swift */,
+				AE4B79272974626A000CBACA /* SimpleCacheManagerForCodable.swift */,
+				AE4B7A6629747D18000CBACA /* ExpiringCodableObjectWithKey.swift */,
+			);
+			path = CacheManager;
+			sourceTree = "<group>";
+		};
+		AE4B7A5A2974784F000CBACA /* WebAPI */ = {
+			isa = PBXGroup;
+			children = (
+				AE4B7A5C297478AF000CBACA /* RequestDto+Employee.swift */,
+				AE4B7A6229747ACD000CBACA /* ResponseDto+EmployeeServiceAvailability.swift */,
+				AE4B7A4C2974641E000CBACA /* WebAPI.swift */,
+				AE4B7A5E297479D5000CBACA /* RepositoriesErrorHandler.swift */,
+			);
+			path = WebAPI;
+			sourceTree = "<group>";
+		};
+		AE4B7A5B2974789F000CBACA /* WebAPI+Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "WebAPI+Models";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE4B78D829746109000CBACA /* CachePolicy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE4B78E82974610A000CBACA /* Build configuration list for PBXNativeTarget "CachePolicy" */;
+			buildPhases = (
+				AE4B78D529746109000CBACA /* Sources */,
+				AE4B78D629746109000CBACA /* Frameworks */,
+				AE4B78D729746109000CBACA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CachePolicy;
+			productName = CachePolicy;
+			productReference = AE4B78D929746109000CBACA /* CachePolicy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE4B78D129746109000CBACA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					AE4B78D829746109000CBACA = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = AE4B78D429746109000CBACA /* Build configuration list for PBXProject "CachePolicy" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AE4B78D029746109000CBACA;
+			productRefGroup = AE4B78DA29746109000CBACA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE4B78D829746109000CBACA /* CachePolicy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE4B78D729746109000CBACA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE4B78E52974610A000CBACA /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE4B78D529746109000CBACA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE4B7A5D297478AF000CBACA /* RequestDto+Employee.swift in Sources */,
+				AE4B7A3F2974626B000CBACA /* NetworkAgentUtils.swift in Sources */,
+				AE4B7A422974626B000CBACA /* E.ResponseFormat.swift in Sources */,
+				AE4B7A4B297463E2000CBACA /* SampleUseCase.swift in Sources */,
+				AE4B7A412974626B000CBACA /* E.FRPSimpleNetworkClientAPIError.swift in Sources */,
+				AE4B7A5529746F2C000CBACA /* URLRequest+Extensions.swift in Sources */,
+				AE4B7A5129746C63000CBACA /* PointFree.swift in Sources */,
+				AE4B7A1A2974626B000CBACA /* CachePolicy.swift in Sources */,
+				AE4B7A6329747ACD000CBACA /* ResponseDto+EmployeeServiceAvailability.swift in Sources */,
+				AE4B7A452974626B000CBACA /* typealias.Networking.swift in Sources */,
+				AE4B78EC29746164000CBACA /* CachePolicyTestingView.swift in Sources */,
+				AE4B7A3E2974626B000CBACA /* FRPSimpleNetworkAgentProtocol.swift in Sources */,
+				AE4B7A402974626B000CBACA /* E.HttpMethod.swift in Sources */,
+				AE4B7A6729747D18000CBACA /* ExpiringCodableObjectWithKey.swift in Sources */,
+				AE4B7A5329746EFF000CBACA /* String+Extensions.swift in Sources */,
+				AE4B79CC2974626B000CBACA /* Combine+CancelBag.swift in Sources */,
+				AE4B7A5F297479D5000CBACA /* RepositoriesErrorHandler.swift in Sources */,
+				AE4B7A5729747101000CBACA /* Date+Extensions.swift in Sources */,
+				AE4B7A4D2974641E000CBACA /* WebAPI.swift in Sources */,
+				AE4B7A4F297467C2000CBACA /* AppErrors.swift in Sources */,
+				AE4B7A3C2974626B000CBACA /* FRPSimpleNetworkAgentRequestModel.swift in Sources */,
+				AE4B7A3D2974626B000CBACA /* FRPSimpleNetworkAgent.swift in Sources */,
+				AE4B78DD29746109000CBACA /* CachePolicyApp.swift in Sources */,
+				AE4B7A432974626B000CBACA /* NetworkingUtils.swift in Sources */,
+				AE4B79DD2974626B000CBACA /* SimpleCacheManagerForCodable.swift in Sources */,
+				AE4B79D02974626B000CBACA /* Publisher+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AE4B78E62974610A000CBACA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AE4B78E72974610A000CBACA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		AE4B78E92974610A000CBACA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CachePolicy/CachePolicy.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CachePolicy/Preview Content\"";
+				DEVELOPMENT_TEAM = KB96RL3CB8;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cachepolicy.com.CachePolicy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AE4B78EA2974610A000CBACA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CachePolicy/CachePolicy.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CachePolicy/Preview Content\"";
+				DEVELOPMENT_TEAM = KB96RL3CB8;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cachepolicy.com.CachePolicy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE4B78D429746109000CBACA /* Build configuration list for PBXProject "CachePolicy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE4B78E62974610A000CBACA /* Debug */,
+				AE4B78E72974610A000CBACA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE4B78E82974610A000CBACA /* Build configuration list for PBXNativeTarget "CachePolicy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE4B78E92974610A000CBACA /* Debug */,
+				AE4B78EA2974610A000CBACA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AE4B78D129746109000CBACA /* Project object */;
+}
